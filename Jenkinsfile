@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        docker {
+            image 'openjdk:11'   // Or use any JDK version you prefer
+        }
+    }
 
     stages {
         stage('Checkout') {
