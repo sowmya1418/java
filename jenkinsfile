@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/sowmya1418/Jenkins-Zero-To-Hero.git'
+            }
+        }
+
+        stage('Compile Java') {
+            steps {
+                sh 'javac HelloWorld.java'
+            }
+        }
+
+        stage('Run Java') {
+            steps {
+                sh 'java HelloWorld'
+            }
+        }
+    }
+}
