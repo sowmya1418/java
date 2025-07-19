@@ -5,7 +5,6 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Cloning source code...'
-                git 'https://github.com/sowmya1418/java'
             }
         }
 
